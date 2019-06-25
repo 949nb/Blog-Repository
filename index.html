@@ -284,6 +284,157 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Blog-Repository/2019/06/25/扩展运算符笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhhhhhy_">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Blog-Repository/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhhhhhy_'s Home">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Blog-Repository/2019/06/25/扩展运算符笔记/" class="post-title-link" itemprop="url">扩展运算符笔记</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-25 19:17:02 / 修改时间：19:25:38" itemprop="dateCreated datePublished" datetime="2019-06-25T19:17:02+08:00">2019-06-25</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="扩展运算符-…arr"><a href="#扩展运算符-…arr" class="headerlink" title="扩展运算符(…arr)"></a>扩展运算符(…arr)</h3><p>扩展运算符永三个点号表示，功能是把数组或者类数组对象展开成一系列用逗号隔开的值:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> foo = <span class="function"><span class="keyword">function</span>(<span class="params">a,b,c</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a)</span><br><span class="line">  <span class="built_in">console</span>.log(b)</span><br><span class="line">  <span class="built_in">console</span>.log(c)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// "..."这三个点号，将数组的每一项展开，并且用逗号隔开</span></span><br><span class="line"></span><br><span class="line">foo(...arr) <span class="comment">// 1 2 3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 其实这个...arr 就等于 1,2,3</span></span><br></pre></td></tr></table></figure>
+
+<p>特殊应用场景:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">//数组深拷贝</span></span><br><span class="line"><span class="keyword">let</span> arr2 = arr</span><br><span class="line"><span class="keyword">let</span> arr3 = [...arr]</span><br><span class="line"><span class="built_in">console</span>.log(arr === arr2) <span class="comment">//true,说明指向同一个数组</span></span><br><span class="line"><span class="built_in">console</span>.log(arr === arr3) <span class="comment">//false,说明指向不同的数组</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//把一个数组插入另一个数组字面量</span></span><br><span class="line"><span class="keyword">var</span> arr4 = [...arr,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line"><span class="built_in">console</span>.log(arr4) <span class="comment">// [1, 2, 3, 4, 5, 6]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//字符串转数组</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">'love'</span></span><br><span class="line"><span class="keyword">var</span> arr5 = [...str] <span class="comment">//类数组对象也是可以的</span></span><br><span class="line"><span class="built_in">console</span>.log(arr5)  <span class="comment">// ['l', 'o', 'v', 'e']</span></span><br></pre></td></tr></table></figure>
+
+<p>拓展运算符其实就是将一个数组的每一项都展开并用逗号连接！</p>
+<p>以上！！</p>
+<p>👍</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/Blog-Repository/2019/06/25/我的第一篇博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -465,7 +616,7 @@
                 
                   <a href="/Blog-Repository/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
