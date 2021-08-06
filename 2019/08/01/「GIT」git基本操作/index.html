@@ -94,20 +94,18 @@
 
 
 
-  <meta name="description" content="《图解HTTP》读书笔记  什么是HTTP？HTTP协议用于客户端和服务器端之间的通信  HTTP协议和TCP/IP协议中的大多数协议一样，用于客户端和服务器之间的通信。用HTTP协议能够分辨出哪边是客户端，哪边是服务器端。（根据报文的信息） HTTP协议规定，请求从客户端发出，最后服务器端响应该请求并返回。换句话说，肯定是先从客户端这边开始建立通信的，服务器端在没有接收到请求之前不会发送响应。">
+  <meta name="description" content="Git工作流程workplace(工作区)=&amp;gt;index/staged(暂存区)=&amp;gt;repository(本地仓库)=&amp;gt;remote(远端仓库)  git 有三种状态： 已提交(committed) 已修改(modified) 已暂存(staged)   git.config一般在三个地方系统级 用户级别 和 项目级别  git add  git commit  git stat">
+<meta name="keywords" content="Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="「图解HTTP」笔记(二)">
-<meta property="og:url" content="http://yoursite.com/2019/08/07/「图解HTTP」笔记-二/index.html">
+<meta property="og:title" content="Git基操">
+<meta property="og:url" content="http://yoursite.com/2019/08/01/「GIT」git基本操作/index.html">
 <meta property="og:site_name" content="hanyuの网络日志">
-<meta property="og:description" content="《图解HTTP》读书笔记  什么是HTTP？HTTP协议用于客户端和服务器端之间的通信  HTTP协议和TCP/IP协议中的大多数协议一样，用于客户端和服务器之间的通信。用HTTP协议能够分辨出哪边是客户端，哪边是服务器端。（根据报文的信息） HTTP协议规定，请求从客户端发出，最后服务器端响应该请求并返回。换句话说，肯定是先从客户端这边开始建立通信的，服务器端在没有接收到请求之前不会发送响应。">
+<meta property="og:description" content="Git工作流程workplace(工作区)=&amp;gt;index/staged(暂存区)=&amp;gt;repository(本地仓库)=&amp;gt;remote(远端仓库)  git 有三种状态： 已提交(committed) 已修改(modified) 已暂存(staged)   git.config一般在三个地方系统级 用户级别 和 项目级别  git add  git commit  git stat">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2019/07/29/5d3edb26b2b7338169.png">
-<meta property="og:image" content="https://i.loli.net/2019/07/29/5d3ee0bd9f3dd33290.png">
-<meta property="og:updated_time" content="2019-08-07T12:28:55.000Z">
+<meta property="og:updated_time" content="2021-08-06T10:03:55.196Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="「图解HTTP」笔记(二)">
-<meta name="twitter:description" content="《图解HTTP》读书笔记  什么是HTTP？HTTP协议用于客户端和服务器端之间的通信  HTTP协议和TCP/IP协议中的大多数协议一样，用于客户端和服务器之间的通信。用HTTP协议能够分辨出哪边是客户端，哪边是服务器端。（根据报文的信息） HTTP协议规定，请求从客户端发出，最后服务器端响应该请求并返回。换句话说，肯定是先从客户端这边开始建立通信的，服务器端在没有接收到请求之前不会发送响应。">
-<meta name="twitter:image" content="https://i.loli.net/2019/07/29/5d3edb26b2b7338169.png">
+<meta name="twitter:title" content="Git基操">
+<meta name="twitter:description" content="Git工作流程workplace(工作区)=&amp;gt;index/staged(暂存区)=&amp;gt;repository(本地仓库)=&amp;gt;remote(远端仓库)  git 有三种状态： 已提交(committed) 已修改(modified) 已暂存(staged)   git.config一般在三个地方系统级 用户级别 和 项目级别  git add  git commit  git stat">
 
 
 
@@ -115,7 +113,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/08/07/「图解HTTP」笔记-二/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/01/「GIT」git基本操作/">
 
 
 
@@ -125,7 +123,7 @@
   };
 </script>
 
-  <title>「图解HTTP」笔记(二) | hanyuの网络日志</title>
+  <title>Git基操 | hanyuの网络日志</title>
   
 
 
@@ -290,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Blog-Repository/2019/08/07/「图解HTTP」笔记-二/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Blog-Repository/2019/08/01/「GIT」git基本操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hanyu">
@@ -307,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">「图解HTTP」笔记(二)
+          <h1 class="post-title" itemprop="name headline">Git基操
 
               
             
@@ -333,12 +331,24 @@
                 
               
 
-              <time title="创建时间：2019-08-07 19:32:07 / 修改时间：20:28:55" itemprop="dateCreated datePublished" datetime="2019-08-07T19:32:07+08:00">2019-08-07</time>
+              <time title="创建时间：2019-08-01 19:15:25" itemprop="dateCreated datePublished" datetime="2019-08-01T19:15:25+08:00">2019-08-01</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2021-08-06 18:03:55" itemprop="dateModified" datetime="2021-08-06T18:03:55+08:00">2021-08-06</time>
               
             
           </span>
@@ -372,60 +382,36 @@
       
 
       
-        <blockquote>
-<p>《图解HTTP》读书笔记</p>
-</blockquote>
-<h4 id="什么是HTTP？"><a href="#什么是HTTP？" class="headerlink" title="什么是HTTP？"></a>什么是HTTP？</h4><p>HTTP协议用于客户端和服务器端之间的通信</p>
-<ul>
-<li>HTTP协议和TCP/IP协议中的大多数协议一样，用于客户端和服务器之间的通信。用HTTP协议能够分辨出哪边是客户端，哪边是服务器端。（根据报文的信息）</li>
-<li>HTTP协议规定，请求从客户端发出，最后服务器端响应该请求并返回。换句话说，肯定是先从客户端这边开始建立通信的，服务器端在没有接收到请求之前不会发送响应。</li>
-<li>下面是一个具体的范例：<ul>
-<li>​    <img src="https://i.loli.net/2019/07/29/5d3edb26b2b7338169.png" alt="http报文范例"></li>
-</ul>
-</li>
-<li><strong>请求报文</strong> 是由请求方法、请求URL、协议版本、可选的请求首部字段和内容实体构成的。<strong>在我理解就是四部分</strong>：<ul>
-<li><ol>
-<li>方法、URL、协议版本号</li>
-<li>首部字段</li>
-<li>空格</li>
-<li>参数实体</li>
+        <h3 id="Git工作流程"><a href="#Git工作流程" class="headerlink" title="Git工作流程"></a>Git工作流程</h3><p>workplace(工作区)=&gt;index/staged(暂存区)=&gt;repository(本地仓库)=&gt;remote(远端仓库)</p>
+<hr>
+<h3 id="git-有三种状态："><a href="#git-有三种状态：" class="headerlink" title="git 有三种状态："></a>git 有三种状态：</h3><ol>
+<li>已提交(committed)</li>
+<li>已修改(modified)</li>
+<li>已暂存(staged)</li>
 </ol>
-</li>
-</ul>
-</li>
-<li><strong>响应报文</strong> 和请求报文是一样的，都是四部分组成 唯一不同的就是第一部分的版本号，改成了响应回来的状态码。</li>
-</ul>
-<h4 id="HTTP是不保存状态的协议"><a href="#HTTP是不保存状态的协议" class="headerlink" title="HTTP是不保存状态的协议"></a>HTTP是不保存状态的协议</h4><p>HTTP本身是<strong>无状态协议</strong>，也就是说在HTTP这个级别，协议对于发送过的请求或响应都不会做持久化处理，<strong>协议本身不具备保存之前发送过的请求和响应的功能。</strong></p>
-<p>HTTP虽然是<strong>无状态协议</strong>，但是为了实现期望的<strong>保持状态</strong>的功能（例如：<strong>鉴权</strong>），于是引入了<strong>Cookie技术</strong>。有了Cookie在用HTTP协议通信，就可以管理状态了。</p>
-<ul>
-<li><p>请求URI定位资源</p>
-<ul>
-<li><p><strong>下图为 URI 书写为 HTTP报文 用来请求数据：</strong></p>
-<p><img src="https://i.loli.net/2019/07/29/5d3ee0bd9f3dd33290.png" alt="URI转换为报文"></p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="HTTP-请求方法"><a href="#HTTP-请求方法" class="headerlink" title="HTTP 请求方法"></a>HTTP 请求方法</h4><ul>
-<li><p>GET：获取资源（给我那个资源！）</p>
-</li>
-<li><p>POST：传输实体主体</p>
-</li>
-<li><p>PUT：传输文件(存在安全问题，任何人都可以向服务器传输文件)</p>
-</li>
-<li><p>HEAD：获得报文首部（告诉我通讯情况！）</p>
-</li>
-<li><p>DELETE：删除文件(和PUT一样 存在安全问题)</p>
-</li>
-<li><p>OPTION：询问支持的方法？</p>
-</li>
-<li><p>TRACE：追踪路径</p>
-<p>这些请求方法 除了POST和GET，其他的都不常用。以后自己会写服务器了，写一个服务器玩一下这些方法再。还有就是GET和POST其实都能<strong>传输实体的主体</strong>，区别就是GET的默认参数是在<strong>URL的后面</strong>的，而POST是在请求报文的<strong>第四部分</strong>。其中还有很多的CENTENT-TYPE可以选择。这个后面再写。</p>
-</li>
-</ul>
-<p>后面第二章还说到了持久化连接 <strong>Keep-alive</strong>，这个我也想不太清楚，书中说只要任意一段没有明确提出断开连接，则继续保持TCP连接状态。我不太明白这会不会引发什么不好的事～哎，以后项目中如果碰到了，希望能够知道它的含义。</p>
-<p>keep-alive我理解就是为了减小服务器的压力，没必要每次请求都要断开连接，这样节省出来的时间，网页也就流畅了。<strong>但是持久的保持这样的状态，什么时候才算是结束呢？</strong>会不会衍生出额外的问题？还是抱有疑问。。。</p>
-<h4 id="Cookie的状态管理"><a href="#Cookie的状态管理" class="headerlink" title="Cookie的状态管理"></a>Cookie的状态管理</h4><p>在我学完前端第一次面试的时候，就问了我关于token的问题。我那时候不知道token是什么东西，就失败了。当然还有很多原因。但这个前端鉴权的事情一直萦绕在我的心里，下一篇就好好写一下关于Cookie、Session、token的相关东西。</p>
+<hr>
+<h3 id="git-config一般在三个地方"><a href="#git-config一般在三个地方" class="headerlink" title="git.config一般在三个地方"></a><code>git.config</code>一般在三个地方</h3><p>系统级 用户级别 和 项目级别</p>
+<hr>
+<p>git add</p>
+<hr>
+<p>git commit</p>
+<hr>
+<p>git status</p>
+<hr>
+<p>撤销操作</p>
+<p>git reset –soft HEAD^ 撤销前一次commit</p>
+<p>取消暂存区中的某个文件 git reset HEAD <file></file></p>
+<hr>
+<p>查看自己远程仓库 地址</p>
+<p>git remote -v</p>
+<hr>
+<p>添加一个远程仓库</p>
+<p>git remote add <shortname> <url></url></shortname></p>
+<p>设置完仓库之后可以通过命令 拉去仓库中的代码</p>
+<p>git fetch <remote-name></remote-name></p>
+<hr>
+<p>创建分支</p>
+<p>git branch</p>
 
       
     </div>
@@ -447,6 +433,15 @@
 
     <footer class="post-footer">
       
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/Blog-Repository/tags/Git/" rel="tag"># Git</a>
+          
+        </div>
+      
 
       
       
@@ -456,8 +451,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Blog-Repository/2019/08/01/「GIT」git基本操作/" rel="next" title="Git基操">
-                <i class="fa fa-chevron-left"></i> Git基操
+              <a href="/Blog-Repository/2019/07/29/「图解HTTP」笔记-一/" rel="next" title="「图解HTTP」笔记(一)">
+                <i class="fa fa-chevron-left"></i> 「图解HTTP」笔记(一)
               </a>
             
           </div>
@@ -466,8 +461,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Blog-Repository/2019/08/10/理解Session、Cookie、token/" rel="prev" title="理解Session、Cookie、token">
-                理解Session、Cookie、token <i class="fa fa-chevron-right"></i>
+              <a href="/Blog-Repository/2019/08/07/「图解HTTP」笔记-二/" rel="prev" title="「图解HTTP」笔记(二)">
+                「图解HTTP」笔记(二) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -594,7 +589,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是HTTP？"><span class="nav-number">1.</span> <span class="nav-text">什么是HTTP？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP是不保存状态的协议"><span class="nav-number">2.</span> <span class="nav-text">HTTP是不保存状态的协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP-请求方法"><span class="nav-number">3.</span> <span class="nav-text">HTTP 请求方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cookie的状态管理"><span class="nav-number">4.</span> <span class="nav-text">Cookie的状态管理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git工作流程"><span class="nav-number">1.</span> <span class="nav-text">Git工作流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-有三种状态："><span class="nav-number">2.</span> <span class="nav-text">git 有三种状态：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-config一般在三个地方"><span class="nav-number">3.</span> <span class="nav-text">git.config一般在三个地方</span></a></li></ol></div>
             
 
           </div>
